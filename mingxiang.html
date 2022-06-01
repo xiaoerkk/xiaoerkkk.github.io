@@ -1,0 +1,223 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>研究生出入校门登记（明向校区）</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="//image.wjx.cn/joinnew/css/jqmobo.css?v=2211" />
+    <script type="text/javascript">
+        var isWeiXin =1;
+        var isHongbaoQrcode =0;
+        var isApp=0;
+        var joinactivity = '112985577187';
+        function DecodeId(input) {
+            return input ^ 2130030173;
+        }
+        var activity= 2001380639;
+        activity=DecodeId(activity);
+        var jumpOrgMinPro=1;
+    </script>
+
+    <script src="//image.wjx.cn/joinnew/js/hintinfo.js?v=2211" type="text/javascript"></script>
+
+
+    <script src="//cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        !window.jQuery && document.write('<script src="//image.wjx.cn/js/jquery-1.10.2.min.js"><\/script>');
+    </script>
+
+    <style>
+
+
+body{background:#f7f7f7;}
+#toplogo{width:auto;margin:0 14px;border-bottom:1px dashed #D6D8D9;}
+.chuangGuanWrap{margin:0 14px;background:#fff;font-size: 16px;color: #333;}
+
+@media screen and (min-width: 800px) {
+    body {
+         max-width: 800px;
+        margin: 0 auto !important;
+    }
+}
+
+
+</style>
+</head>
+<body >
+    <div style="height:38px;" id="divTopHeight"></div>
+
+
+
+    <div class="chuangGuanWrap" id="chuangGuanWrap" style="text-align: center; padding: 20px 0 26px;">
+        <div class="formfield formfieldComplete" style="padding-bottom: 14px;border-bottom:0;margin-bottom:0">
+
+
+            <div class="description check__point-state" id="divdsc">
+                提交成功！<br>
+<br>
+您可以正常出入校门。
+            </div>
+            <div id="skipWxMiniApp"></div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <div id="userdialog" style="background: #FFF; max-width: 500px; margin: 20px auto;width:92%; display: none;">
+
+        </div>
+        <script>
+            function translate() {
+                var uName = document.getElementById("uName") //姓名
+                var mobile = document.getElementById("mobile") //电话
+                var address = document.getElementById("address")//地址
+                var notes = document.getElementById("notes")//地址
+                var submit = document.getElementById("submit")//地址
+                if (uName) uName.setAttribute("placeholder", wjxlang.lottery_name);
+                if (mobile) mobile.setAttribute("placeholder", wjxlang.lottery_mobile);
+                if (address) address.setAttribute("placeholder", wjxlang.lottery_address);
+                if (submit) submit.innerText = wjxlang.submit;
+                if (notes) notes.innerText = wjxlang.lottery_submit_information;
+            }
+            translate();
+        </script>
+
+    </div>
+    <div style="display: none;" id="showImgBox">
+    </div>
+
+
+
+
+
+
+
+    <div style="padding: 10px 20px">
+        <a href="/urlreport.aspx?url=OJnKTkA&cm=1" style="float: right; color: #aaa; font-size: 13px;"
+            class="reportto" rel="nofollow">举报</a>
+        <div style="clear: both;">
+        </div>
+    </div>
+     <div id="divPowerBy" style="margin: 0 auto;" class="logofooter"><div class='wjfooter'><span id='spanPower'><a href='https://www.wjx.cn/mobile/index.aspx' target='_blank' title='问卷星_不止问卷调查/在线考试'>问卷星</a>&nbsp;提供技术支持</span></div></div>
+
+    <div id="dialog" style="display: none;">
+
+    </div>
+    <div id="divWeiXin">
+       <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+       <script type="text/javascript">
+       wx.config({
+                appId: 'wx8fe84c5d52db247a',
+                timestamp:1652584787 ,
+                nonceStr: '30623543344430717690804055513226',
+                signature: '5d27d7e58309d3f2d5b9a4abaf26b668ba09ddee',
+                jsApiList: ["updateTimelineShareData", "updateAppMessageShareData", "hideMenuItems", "hideAllNonBaseMenuItem"],
+                openTagList: ['wx-open-launch-weapp']
+            });
+            var jsticket ="";
+            var needHideShare =0;
+            var menus = [];
+            var hideFriend =0;
+            if (needHideShare == 1)
+                menus.push('menuItem:share:timeline');
+            if (needHideShare == 2) {
+                document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+                    WeixinJSBridge.call('hideOptionMenu');
+                });
+            }
+            wx.ready(function () {
+                var wxdesc ='大家一起来参与吧';
+                wx.updateTimelineShareData({
+                    title: "《" + document.title + "》" + wxdesc,
+                    link: 'https://tyutgs.wjx.cn/vm/OJnKTkA.aspx',
+                    imgUrl: 'http://image.wjx.cn/images/wlogo.png'
+                });
+                wx.updateAppMessageShareData({
+                    title: document.title,
+                    desc: wxdesc,
+                    link: 'https://tyutgs.wjx.cn/vm/OJnKTkA.aspx',
+                    imgUrl: 'http://image.wjx.cn/images/wlogo.png'
+                });
+                if (hideFriend)
+                    wx.hideAllNonBaseMenuItem();
+                else if (needHideShare == 1) {
+                    wx.hideMenuItems({
+                        menuList: menus
+                    });
+                }
+            });
+        </script>
+    </div>
+
+
+
+    <script>
+            var cqType=1;
+            var isVip=1;
+            var isAValid='';
+            var flist=0;
+            var isHardadvitisement=0;
+            var HardadvitisementAwardId=0;
+            var isrejoin=0;
+            var jclacount =0;
+            var userSearchWord = '';
+            var hasLoadAward =0;
+            var province = "";
+            var city = "";
+            var canProvideAward =0;
+            var userCMCCMatchAward =0;
+        var matchAwardWay =1;
+        var newAward = 0;
+        var jpmatch = "";
+        var promoteId = "";
+        var joinCout =510;
+        var isDingDing = 0;
+    </script>
+
+    <script src="//image.wjx.cn/js/plugin/previewImage.js?v=2211"></script>
+    <script src="//image.wjx.cn/joinnew/js/completemob.js?v=2211"></script>
+     <script type="text/javascript">
+         function loadLocalRes() {
+             var cdnDomain = "//image.wjx.cn";
+             try {
+                 if (typeof submitSuccess == 'undefined' && cdnDomain) {
+                     var links = document.getElementsByTagName("link");
+                     var linkslength = links.length;
+                     for (var i = 0; i < linkslength; i++) {
+                         if (links[i].href && links[i].href.indexOf(cdnDomain) > -1) {
+                             var newHref = links[i].href.split(cdnDomain)[1];
+                             $('<link rel="stylesheet" type="text/css" href="' + newHref + '" />').appendTo('head');
+                         }
+                     }
+                     var scripts = document.getElementsByTagName("script");
+                     var scriptslength = scripts.length;
+                     for (var i = 0; i < scriptslength; i++) {
+                         if (!scripts[i].src) continue;
+                         if (scripts[i].src.indexOf(cdnDomain) == -1) continue;
+                         var newHref = scripts[i].src.split(cdnDomain)[1];
+                         document.write('<script src="' + newHref + '"><\/script>');
+                     }
+                 }
+             }
+             catch (ex) {
+             }
+         }
+         loadLocalRes();
+
+    </script>
+
+     <script type="text/javascript" src="https://da.mmarket.com/udata_v2/udata_v3.js?aid=000000000000000"></script>
+    <div style="display: none;"><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?21be24c80829bd7a683b2c536fcf520b";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script></div>
+
+</body>
+</html>
